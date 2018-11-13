@@ -1,10 +1,10 @@
 import java.util.UUID
 
-/*  Currying */
 type PassportNumber = String
 type Money = Double
 type AccountId = String
 
+/* No Currying */
 def openAccount(passportNumber: PassportNumber, money: Money): AccountId = {
   /* Some work here */
   UUID.randomUUID().toString
@@ -12,7 +12,7 @@ def openAccount(passportNumber: PassportNumber, money: Money): AccountId = {
 
 val a1 = openAccount("P1", 100.0)
 
-
+/*  Currying */
 def openAccountCurried(passportNumber: PassportNumber)(money: Money): AccountId = {
   /* Some work here */
   UUID.randomUUID().toString
