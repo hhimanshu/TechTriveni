@@ -12,8 +12,8 @@ t1.amount
 /* Immutability - Bank Transaction */
 case class Transaction(date: LocalDateTime, amount: Double, debit: Boolean, description: String)
 
-var t3 = Transaction(LocalDateTime.now, 23.12, debit = true, "Amazon Shopping")
-var t4 = Transaction(LocalDateTime.now, 10000.0, debit = false, "Salary Credited")
+val t3 = Transaction(LocalDateTime.now, 23.12, debit = true, "Amazon Shopping")
+val t4 = Transaction(LocalDateTime.now, 10000.0, debit = false, "Salary Credited")
 // t3.amount = 123.12 // compilation error
 
 
